@@ -19,3 +19,5 @@ Route::get('login',[App\Http\Controllers\UserController::class,'login']);
 Route::middleware([EnsureTokenIsValid::class])->get('index_customer',[App\Http\Controllers\CustomerController::class,'index']);
 Route::middleware([EnsureTokenIsValid::class])->post('store_customer',[App\Http\Controllers\CustomerController::class,'store']);
 Route::middleware([EnsureTokenIsValid::class])->delete('destroy_customer',[App\Http\Controllers\CustomerController::class,'destroy']);
+
+Route::middleware([EnsureTokenIsValid::class])->get('index_region',[App\Http\Controllers\RegionController::class,'index']);
