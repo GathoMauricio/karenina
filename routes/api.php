@@ -21,3 +21,4 @@ Route::middleware([EnsureTokenIsValid::class])->post('store_customer',[App\Http\
 Route::middleware([EnsureTokenIsValid::class])->delete('destroy_customer',[App\Http\Controllers\CustomerController::class,'destroy']);
 
 Route::middleware([EnsureTokenIsValid::class])->get('index_region',[App\Http\Controllers\RegionController::class,'index']);
+Route::middleware([EnsureTokenIsValid::class])->get('load_communes_by_region',[App\Http\Controllers\RegionController::class,'loadCommunesByRegion']);
